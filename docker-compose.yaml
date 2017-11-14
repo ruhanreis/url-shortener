@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node1:
+    build: 
+      dockerfile: ./backend/app.dockerfile
+      context: .
+    image: ruhan/url-shortener-backend  
+    container_name: url-shortener-backend
+    links:
+      - redis
+    ports:
+      - "5000:5000"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
