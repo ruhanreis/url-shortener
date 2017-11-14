@@ -5,13 +5,41 @@ services:
       dockerfile: ./backend/app.dockerfile
       context: .
     image: ruhan/url-shortener-backend  
-    container_name: url-shortener-backend
+    container_name: url-shortener-backend-1
     links:
       - redis
     ports:
-      - "5000:5000"
+      - "5000"
+    depends_on:
+      - "redis"
+
+  node2:
+    build: 
+      dockerfile: ./backend/app.dockerfile
+      context: .
+    image: ruhan/url-shortener-backend  
+    container_name: url-shortener-backend-2
+    links:
+      - redis
+    ports:
+      - "5000"
+    depends_on:
+      - "redis"
+
+  nginx:
+    build:
+      dockerfile: ./nginx/nginx.dockerfile
+      context: .
+    image: ruhan/nginx
+    container_name: nginx
+    ports: 
+      - "80:80"
+    depends_on:
+      - "node1"
+      - "node2"
 
   redis:
     image: redis
+    container_name: redis
     ports:
       - "6379:6379"
