@@ -21,6 +21,7 @@ Caso queira provisionar uma máquina localmente:
 * A pasta do projeto está em /vagrant/app
 
 # Instalação
+* Assumindo que o Ubuntu já vem com o python 2.x instalado
 * Abrir o terminal na pasta do projeto e executar: ./install.sh
 * O script irá instalar os pacotes necessários para os testes, Docker, Docker-Compose e irá fazer o build das imagens necessárias para a aplicação
 * As imagens são: nginx, redis, api python
