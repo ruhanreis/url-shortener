@@ -2,6 +2,12 @@
 # Script only works if sudo caches the password for a few minutes
 sudo true
 
+# Install python packages
+sudo apt-get install python-pip
+sudo pip install flask
+sudo pip install fakeredis
+
+
 # Install docker
 if which docker > /dev/null ; then
     echo "Docker is already installed"

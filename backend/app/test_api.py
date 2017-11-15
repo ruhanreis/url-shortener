@@ -2,7 +2,7 @@ import json
 import unittest
 import fakeredis
 
-import app.url_shortener  as api
+import url_shortener  as api
 
 
 class ApiTests(unittest.TestCase):
@@ -228,6 +228,10 @@ class ApiTests(unittest.TestCase):
     def test_delete_url_error(self):
         response = self.app.delete("/urls/" + "123")
         self.assertEqual(response.status_code, 404)
+
+
+if __name__ == '__main__':
+    unittest.main()
 
 
 
