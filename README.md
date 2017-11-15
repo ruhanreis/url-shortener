@@ -36,5 +36,13 @@ Caso queira provisionar uma máquina localmente:
 # Testes
 * Abrir o terminar na pasta do projeto e navegar até backend/app
 * Executar: python test_api.py
+* O ouput deverá ser: 
+```
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.066s
+
+OK
+```
 
 
