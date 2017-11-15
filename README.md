@@ -15,7 +15,7 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 # Vagrant (Pular esta etapa caso já tenha uma máquina provisionada)
 Caso queira provisionar uma máquina localmente:
 * Instalar o Vagrant: https://www.vagrantup.com/downloads.html
-* O vagrant está configurado para provisionar uma máquina do tipo Ubuntu Server 14.04 LTS
+* O vagrant está configurado para provisionar uma máquina do tipo Ubuntu Server 14.04 LTS com o ip local de 192.168.50.4
 * Abrir o terminal na pasta do projeto e executar: vagrant up
 * Para acessar a maquina, executar: vagrant ssh
 * A pasta do projeto está em /vagrant/app
