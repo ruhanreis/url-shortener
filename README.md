@@ -29,6 +29,7 @@ Caso queira provisionar uma máquina localmente:
 * Abrir o terminal na pasta do projeto e executar: ./run.sh
 * O script irá iniciar os containers
 * O nginx está configurado para utilizar a porta 80, portanto, ao fazer alguma requisição à algum endpoint, usar a mesma porta do ngnix
+* Inicialmente irão subir 2 containers que atendem as requisições da api, são eles: url-shortener-backend-1 e url-shortener-backend-2. Caso queira provisionar mais containers, alterar os arquivos docker-compose.yaml e ngix.conf. Os nós que representam a api são identificados pelo nome de node1, node2.. node[n].
 
 # Testes
 * Abrir o terminar na pasta do projeto e navegar até backend/app
